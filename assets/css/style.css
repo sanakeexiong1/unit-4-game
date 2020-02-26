@@ -1,0 +1,44 @@
+.img-thumbnail {
+    width: 200px;
+    height: 200px;
+}
+
+.main {
+    font-size: 50px;
+    background-color: black;
+    color: white;
+}
+
+.helloMessage {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 25px;
+}
+
+.instructions {
+    font-size: 20px;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+body {
+    background-image: url(https://previews.123rf.com/images/maximusnd/maximusnd1810/maximusnd181004798/110137778-abstract-space-background-night-sky-with-stars-and-nebula-.jpg);
+}
+
+.autoNumber {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+}
+
+.score {
+    width: 480px;
+    height: 200px;
+    background-color: white;
+}
+
+.yourNumber {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+}
