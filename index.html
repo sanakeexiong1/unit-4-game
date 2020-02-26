@@ -52,8 +52,8 @@
         <div class="row">
             <div class="col-sm-3">
                 <div class="autoNumber">
-                    <p class="yourAutoNumber">Your Auto Generated Number Is:</p>
-                    <p class="generatedNumber"></p>
+                    <p class="yourAutoNumber">Your Auto Generated Number Is:<p class="generatedNumber"></p></p>
+                
                 </div>   
             </div>
             <div class="col-sm-6">
@@ -64,12 +64,49 @@
             </div>
             <div class="col-sm-3">
                 <div class="yourNumber">
-                    <p class="matchThis">Your Number Is:</p>
-                    <p class = yourOwnNumber></p>
+                    <p class="matchThis">Your Number Is:<p class = yourOwnNumber></p></p>
                 </div>
             </div>
         </div>
     </div>
+
+<!--From this point is strictly JQuery Work-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+//Give the user the generated number
+var targetNumber =100;
+$(".generatedNumber").text(targetNumber);
+
+//Set the counter to zero
+var count =0;
+
+//Give the four crystals four numerical value options
+var crystalValues =[1, 7, 5, 10]; 
+for (var i=0; i < crystalValues.length; i++) {
+    var imageCrystal = $("<img>");
+    imageCrystal.atrr("data-crystalvalue", crystalValues[i]);
+}
+
+//Allow value to associate with crystal image
+$(".imageCrystal").on("click", function() {
+    var actualCrsytalValue = ($(this).attr("data-crystalvalue"));
+    actualCrystalValue = parseInt(crystalvalue)
+
+    counter += actualCrystalValue;
+
+    //Determine if the user wins or loses
+    if (counter === targetNumber) {
+        console.log("You Win!");
+    }
+
+    else if (counter >= targetNumber) {
+        console.log("You lose");
+    }
+});
+
+</script>
+
 </body>
 
 </html>
